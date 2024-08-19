@@ -8,7 +8,7 @@
         <tr>
             <th>No</th>
             <th>Nama kategori</th>
-            <th>Judul/th>
+            <th>Judul</th>
             <th>Penulis</th>
             <th>Penerbit</th>
             <th>Tahun Terbit</th>
@@ -27,7 +27,7 @@
                 <td><?php echo $data['Penulis']; ?></td>
                 <td><?php echo $data['Penerbit']; ?></td>
                 <td><?php echo $data['TahunTerbit']; ?></td>
-                <td><?php echo $data['deskripsi']; ?></td>
+                <td><?php echo $data['Deskripsi']; ?></td>
                 <td>
                     <a href="?page=buku_ubah&&id=<?php echo $data['BukuID']; ?>" class="btn btn-info">ubah</a>
                     <a onclick="return confirm('Apakah and yakin menghapus kategori ini?')"href="?page=buku_hapus&&id=<?php echo $data['BukuID']; ?>" class="btn btn-danger">hapus</a>

@@ -1,9 +1,9 @@
-<h1 class="m-4">Ulasan Buku</h1>
+<h1 class="m-4">Peminjaman</h1>
 <div class="card m-3">
     <div class="card-body p-5">
          <div class="row">
              <div class="col-md-12">
-                 <a href="?page=Ulasan_tambah" class="btn btn-primary"> Tambah Ulasan</a> 
+                 <a href="?page=Ulasan_tambah" class="btn btn-primary">Pinjaman</a> 
                      <table class="table table-bordered mt-3" id="dataTable" width="100%" cellspacing="0" >
                          <tr>
                              <th>No</th>

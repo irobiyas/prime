@@ -21,7 +21,8 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-5">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Login Perpustakaan Digital</h3></div>
+                                    <div class="card-header">
+                                        <h3 class="text-center font-weight-light my-4">Login</h3></div>
                                     <div class="card-body">
                                         <?php
                                             if(isset($_POST['login'])) {
@@ -39,7 +40,7 @@
                                             }
                                         ?>
                                         <form method="post">
-                                            <div class="form-floating mb-3">
+                                            <div class="form-floating mb-2">
                                                 <input class="form-control" id="inputEmail" required type="text" name="username" placeholder="username" />
                                                 <label for="inputEmail">Username</label>
                                             </div>
@@ -47,9 +48,9 @@
                                                 <input class="form-control" id="inputPassword" required type="password" name="password" placeholder="Password" />
                                                 <label for="inputPassword">Password</label>
                                             </div>
-                                            <div class="form-grup d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <button class="btn btn-primary" type="submit" name="login" valeu="login">Login</button>
-                                                <a class="btn btn-danger" href="register.php">Register</a>
+                                            <div class="d-grid gap-2 mx-auto">
+                                                <button class="btn btn-primary" type="submit" name="login" value="login">Login</button>
+                                                <a class="btn btn-secondary" href="register.php">Register</a>
                                             </div>
                                             </div>
                                         </form>

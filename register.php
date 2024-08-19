@@ -30,6 +30,7 @@
                                                 $nama_lengkap = $_POST['namalengkap'];
                                                 $alamat = $_POST['alamat'];
                                                 $email = $_POST['email'];
+                                                $no_telepon = $_POST['no_telepon'];
                                                 $level = $_POST['level'];
 
                                                 $insert = mysqli_query($koneksi, "INSERT INTO user(username,password,namalengkap,alamat,email,level) VALUES('$username','$password','$nama_lengkap','$alamat','$email','$level')");
@@ -43,36 +44,37 @@
                                             }
                                         ?>
                                         <form method="post">
-                                            <div class="form-group">
-                                            <label>Username</label>
-                                                <input class="form-control" type="username" required name="username" placeholder="Masukan username" />
+                                            <div class="form-floating mb-2">
+                                                <input class="form-control" type="username" required name="username" placeholder="username" />
+                                                <label for="inputUsername">Username</label>
                                             </div>
-                                            <div class="form-group">
-                                            <label>Password</label>
-                                                <input class="form-control"  required type="password" name="password" placeholder="Masukan password" />
+                                            <div class="form-floating mb-2">
+                                                <input class="form-control" type="password" required name="password" placeholder="password" />
+                                                <label for="inputPassword">Password</label>
                                             </div>
-                                            <div class="form-group">
-                                            <label>Nama lengkap</label>
-                                                <input class="form-control" type="text" required name="nama" placeholder="Masukan nama lengkap" />
+                                            <div class="form-floating mb-2">
+                                                <input class="form-control" type="text" required name="namalengkap" placeholder="Nama Lengkap" />
+                                                <label for="inputName">Nama Lengkap</label>
                                             </div>
-                                            <div class="form-group">
-                                                <label class="small mb-1">Alamat</label>
-                                                <textarea name="alamat" rows="5" required class="form-control py-4"></textarea>
+                                            <div class="form-floating mb-2">
+                                                <textarea class="form-control" placeholder="alamat" name="alamat" id="floatingTextarea" style="height: 100px"></textarea>
+                                                <label for="floatingTextarea">Alamat</label>
                                             </div>
-                                            <div class="form-group">
-                                            <label>Email</label>
+                                            <div class="form-floating mb-2">
                                                 <input class="form-control" type="text" required name="email" placeholder="Masukan email" />
+                                                <label for="inputEmail">Email</label>
                                             </div>
-                                            <div class="form-group">
-                                            <label>No Telepon</label>
+                                            <div class="form-floating mb-2">
                                                 <input class="form-control" type="text" required name="no_telepon" placeholder="Masukan no telepon" />
+                                                <label for="inputTelepon">No Telepon</label>
                                             </div>
-                                            <div class="form-group">
-                                            <label class="small mb-1">Level</label>
-                                                <select name="level" required class="form-select py-2">
-                                                    <option value="admin">admin</option>
-                                                    <option value="peminjam">peminjam</option>
-                                                </select>
+                                            <div class="form-floating mb-2">
+                                            <select class="form-select" id="floatingSelectGrid" name="level">
+                                                <option selected>---</option>
+                                                <option value="admin">Admin</option>
+                                                <option value="peminjam">Peminjam</option>
+                                            </select>
+                                            <label for="floatingSelectGrid">Role</label>
                                             </div>
                                             <div class="form-grup d-flex align-items-center justify-content-between mt-4 mb-0">
                                                 <button class="btn btn-primary" type="submit" name="register" valeu="register">Register</button>
