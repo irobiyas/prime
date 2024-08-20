@@ -33,7 +33,7 @@
                                                 $cek = mysqli_num_rows($data);
                                                 if($cek > 0 ){
                                                     $_SESSION['user'] = mysqli_fetch_array($data);
-                                                    echo '<script>alert("Selamat datang, Login berhasil"); location.href="index.php";</script>';
+                                                    echo '<script>location.href="index.php";</script>';
                                                 }else{
                                                     echo '<script>alert("Maaf, Password/Username salah");</script>';
                                                 }

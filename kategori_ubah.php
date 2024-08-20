@@ -1,6 +1,6 @@
-<h1 class="mt-4">Ubah kategori buku</h1>
-<div class="card">
-    <div class="card-body">
+<h1 class="m-4">Ubah kategori buku</h1>
+<div class="card m-3">
+    <div class="card-body p-5">
        <div class="row">
            <div class="col-md-12">
                <form method="post">
@@ -11,7 +11,7 @@
                       $query = mysqli_query($koneksi, "UPDATE kategoribuku set NamaKategori='$kategori' WHERE KategoriID=$id");
 
                       if($query) {
-                       echo '<script>alert("Ubah Kategori berhasil.");</script>';
+                       echo '<script>alert("Berhasil."); location.href="index.php?page=kategori"</script>';
                      }else{
                        echo '<script>alert("Ubah Kategori gagal.");</script>';
                    }
@@ -21,7 +21,7 @@
        
         ?>
         <div class="row mb-3">
-           <div class="col-md-2">Nama kategori</div>
+           <div class="col-md-2">Nama Kategori</div>
             <div class="col-md-8"><input type="text" value="<?php echo $data['NamaKategori']; ?>"class="form-control" name="kategori"></div>
         </div>
         <div class="row">

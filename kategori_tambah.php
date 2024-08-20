@@ -1,6 +1,6 @@
-<h1 class="mt-4">Kategori Buku</h1>
-<div class="card">
-    <div class="card-body">
+<h1 class="m-4">Kategori Buku</h1>
+<div class="card m-3">
+    <div class="card-body p-5">
     <div class="row">
     <div class="col-md-12">
       <form method="post">
@@ -19,7 +19,7 @@
         
         ?>
         <div class="row mb-3">
-           <div class="col-md-2">Nama kategori</div>
+           <div class="col-md-2">Nama Kategori</div>
            <div class="col-md-8"><input type="text" class="form-control" name="kategori"></div>
         </div>
         <div class="row">

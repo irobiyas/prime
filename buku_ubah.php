@@ -1,6 +1,6 @@
-<h1 class="mt-4">Buku</h1>
-<div class="card">
-    <div class="card-body">
+<h1 class="m-4">Buku</h1>
+<div class="card m-3">
+    <div class="card-body p-5">
     <div class="row">
     <div class="col-md-12">
       <form method="post">
@@ -16,7 +16,7 @@
                 $query = mysqli_query($koneksi, "UPDATE buku SET KategoriID='$KategoriID', Judul='$judul', Penulis='$penulis', Penerbit='$penerbit', TahunTerbit='$tahun_terbit', deskripsi='$deskripsi' WHERE BukuID=$id");
 
                 if($query) {
-                    echo '<script>alert("Ubah data berhasil.");</script>';
+                    echo '<script>alert("Ubah data berhasil."); location.href="index.php?page=buku"</script>';
                 }else{
                     echo '<script>alert("Ubah data gagal.");</script>';
                 }
@@ -26,7 +26,7 @@
         
         ?>
         <div class="row mb-3">
-           <div class="col-md-2">kategori</div>
+           <div class="col-md-2">Kategori</div>
            <div class="col-md-8">
                  <select name="KategoriID" class="form-control">
                     <?php

@@ -1,10 +1,10 @@
-<h1 class="mt-4">Buku</h1>
-<div class="card">
-    <div class="card-body">
+<h1 class="m-4">Buku</h1>
+<div class="card m-3">
+    <div class="card-body p-5">
     <div class="row">
     <div class="col-md-12">
-    <a href="?page=buku_tambah" class="btn btn-primary">+ tambah data</a>
-      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0 " >
+    <a href="?page=buku_tambah" class="btn btn-primary"> Tambah Buku</a>
+      <table class="table table-bordered mt-3" id="dataTable" width="100%" cellspacing="0 " >
         <tr>
             <th>No</th>
             <th>Nama kategori</th>
@@ -29,8 +29,8 @@
                 <td><?php echo $data['TahunTerbit']; ?></td>
                 <td><?php echo $data['Deskripsi']; ?></td>
                 <td>
-                    <a href="?page=buku_ubah&&id=<?php echo $data['BukuID']; ?>" class="btn btn-info">ubah</a>
-                    <a onclick="return confirm('Apakah and yakin menghapus kategori ini?')"href="?page=buku_hapus&&id=<?php echo $data['BukuID']; ?>" class="btn btn-danger">hapus</a>
+                    <a href="?page=buku_ubah&&id=<?php echo $data['BukuID']; ?>" class="btn btn-info">Ubah</a>
+                    <a onclick="return confirm('Apakah and yakin menghapus kategori ini?')"href="?page=buku_hapus&&id=<?php echo $data['BukuID']; ?>" class="btn btn-danger">Hapus</a>
                 </td>
             </tr>
             <?php
