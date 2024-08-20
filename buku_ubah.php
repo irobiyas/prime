@@ -1,3 +1,11 @@
+<?php
+
+// Cek apakah user yang login adalah admin
+if ($_SESSION['user']['level'] != 'admin') {
+    echo '<script>alert("Akses Ditolak! Hanya admin yang dapat melihat halaman ini"); location.href="index.php"</script>';
+}
+?>
+
 <h1 class="m-4">Buku</h1>
 <div class="card m-3">
     <div class="card-body p-5">

@@ -15,7 +15,7 @@ $data = mysqli_fetch_array($query);
 // Jika form telah disubmit
 if (isset($_POST['update'])) {
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $password = md5($_POST['password']);
     $email = $_POST['email'];
     $nama_lengkap = $_POST['nama_lengkap'];
     $no_telepon = $_POST['no_telepon'];
