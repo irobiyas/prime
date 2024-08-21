@@ -1,1 +1,1 @@
-<h1 class="mt-4">Halaman tidak ditemukan</h1>
+<h1 class="m-4">Halaman tidak ditemukan</h1>

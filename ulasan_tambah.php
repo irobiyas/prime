@@ -1,6 +1,6 @@
-<h1 class="mt-4">Ulasan Buku</h1>
-<div class="card">
-    <div class="card-body">
+<h1 class="m-4">Ulasan Buku</h1>
+<div class="card m-3">
+    <div class="card-body p-5">
     <div class="row">
     <div class="col-md-12">
       <form method="post">
@@ -13,7 +13,7 @@
                 $query = mysqli_query($koneksi, "INSERT INTO `ulasanbuku` (`UserID`, `BukuID`, `Ulasan`, `Rating`) VALUES ('$UserID', '$BukuID', '$ulasan', '$rating')");
 
                 if($query) {
-                    echo '<script>alert("Tambah data berhasil.");</script>';
+                    echo '<script>alert("Tambah data berhasil."); location.href="index.php?page=ulasan"</script>';
                 }else{
                     echo '<script>alert("Tambah data gagal.");</script>';
                 }
