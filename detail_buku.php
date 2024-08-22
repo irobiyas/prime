@@ -27,17 +27,21 @@ if ($query && mysqli_num_rows($query) > 0) {
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <img src="<?php echo $gambar_path; ?>" alt="<?php echo htmlspecialchars($judul); ?>" class="img-fluid">
+        <div class="card mb-3">
+        <div class="row p-5">
+            <div class="col-md-4">
+                <img src="<?php echo $gambar_path; ?>" alt="<?php echo htmlspecialchars($judul); ?>" class="img-fluid rounded-start" style="max-width: 250px">
             </div>
-            <div class="col-md-6">
-                <h1><?php echo htmlspecialchars($judul); ?></h1>
+            <div class="col-md-8">
+            <div class="card-body">
+                <h2><?php echo htmlspecialchars($judul); ?></h2>
                 <p><strong>Penulis:</strong> <?php echo htmlspecialchars($penulis); ?></p>
                 <p><strong>Tahun Terbit:</strong> <?php echo htmlspecialchars($tahun); ?></p>
                 <p><?php echo htmlspecialchars($deskripsi); ?></p>
+            </div> 
             </div>
         </div>
+</div>
         <a href="index.php?" class="btn btn-primary">Kembali ke Daftar Buku</a>
     </div>
 </body>

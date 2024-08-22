@@ -33,6 +33,7 @@
                                                 $no_telepon = $_POST['no_telepon'];
                                                 $level = $_POST['level'];
 
+                                                if ($level == 'peminjam') {
                                                 $insert = mysqli_query($koneksi, "INSERT INTO user(username,password,namalengkap,alamat,email,no_telepon,level) VALUES('$username','$password','$nama_lengkap','$alamat','$email','$no_telepon','$level')");
 
                                                 if($insert) {
@@ -42,7 +43,8 @@
                                                     echo '<script>alert("Register gagal, silahkan ulangi kembali.");</script>';
                                               }
                                             }
-                                        ?>
+                                            }
+                                    ?>
                                         <form method="post">
                                             <div class="form-floating mb-2">
                                                 <input class="form-control" type="username" required name="username" placeholder="username" />
@@ -68,15 +70,8 @@
                                                 <input class="form-control" type="text" required name="no_telepon" placeholder="Masukan no telepon" />
                                                 <label for="inputTelepon">No Telepon</label>
                                             </div>
-                                            <div class="form-floating mb-2">
-                                            <select class="form-select" id="floatingSelectGrid" name="level">
-                                                <option selected>---</option>
-                                                <option value="admin">Admin</option>
-                                                <option value="peminjam">Peminjam</option>
-                                            </select>
-                                            <label for="floatingSelectGrid">Role</label>
-                                            </div>
                                             <div class="d-grid gap-2 mx-auto">
+                                            <input type="hidden" name="level" value="peminjam"> <!-- Hanya peminjam -->
                                                 <button class="btn btn-primary" type="submit" name="register" value="register">Register</button>
                                                 <a class="btn btn-secondary" href="login.php">Login</a>
                                             </div>
@@ -85,7 +80,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>w
+                        </div>
                     </div>
                 </main>
             </div>
