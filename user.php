@@ -13,7 +13,6 @@ if ($_SESSION['user']['level'] != 'admin') {
             <tr>
                 <th>ID</th>
                 <th>Username</th>
-                <th>Password</th>
                 <th>Email</th>
                 <th>Nama Lengkap</th>
                 <th>No. Telepon</th>
@@ -28,7 +27,6 @@ if ($_SESSION['user']['level'] != 'admin') {
             <tr>
                 <td><?php echo $data['UserID']; ?></td>
                 <td><?php echo $data['Username']; ?></td>
-                <td><?php echo $data['Password']; ?></td>
                 <td><?php echo $data['Email']; ?></td>
                 <td><?php echo $data['NamaLengkap']; ?></td>
                 <td><?php echo $data['no_telepon']; ?></td>

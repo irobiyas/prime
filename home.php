@@ -68,46 +68,42 @@ if ($_SESSION['user']['level'] != 'peminjam') { ?>
                             if ($_SESSION['user']['level'] != 'admin') { 
                                 ?>
 
-                        <div class="container-fluid px-4">
-                        <h1 class="mt-4">Perpustakaan Digital</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Perpustakaan Digital</li>
-                        </ol>
-                            <?php
-                        // Query untuk mendapatkan semua data buku
-                        $query = mysqli_query($koneksi, "SELECT * FROM buku");
+                            <div class="container-fluid px-4">
+                                <h1 class="mt-4">Perpustakaan Digital</h1>
+                                <ol class="breadcrumb mb-4">
+                                    <li class="breadcrumb-item active">Perpustakaan Digital</li>
+                                </ol>
+                                <div class="row">
+                                    <?php
+                                    // Query untuk mendapatkan semua data buku
+                                    $query = mysqli_query($koneksi, "SELECT * FROM buku");
 
-                        // Pastikan query berhasil
-                        if ($query) {
-                            while ($buku = mysqli_fetch_assoc($query)) {
-                                // Ambil data buku
-                                $gambar = $buku['gambar'];
-                                $judul = $buku['Judul'];
-                                $deskripsi = $buku['deskripsi'];
-                               // Cetak path gambar untuk debugging
-                                $gambar_path = 'uploads/' . htmlspecialchars($gambar);
-                                echo '<!-- Path gambar: ' . $gambar_path . ' -->';
-                                ?>
-                            <div class="row-cols-1 row-cols-md-3 g-4">
-                                <div class="col-md-4 mb-4">
-                                    <div class="card">
-                                        <!-- Gambar Buku -->
-                                        <img src="<?php echo $gambar_path; ?>" class="card-img-top" alt="<?php echo htmlspecialchars($judul); ?>">
-                                        <div class="card-body">
-                                            <!-- Judul Buku -->
-                                            <h5 class="card-title"><?php echo htmlspecialchars($judul); ?></h5>
-                                            <!-- Deskripsi Buku -->
-                                            <p class="card-text"><?php echo htmlspecialchars($deskripsi); ?></p>
+                                    // Pastikan query berhasil
+                                    if ($query) {
+                                        while ($buku = mysqli_fetch_assoc($query)) {
+                                            // Ambil data buku
+                                            $gambar = $buku['gambar'];
+                                            $judul = $buku['Judul'];
+                                            $deskripsi = $buku['deskripsi'];
+                                            // Path gambar
+                                            $gambar_path = 'assets/img/' . htmlspecialchars($gambar);
+                                    ?>
+                                    <div class="col-md-4 mb-4">
+                                        <div class="card">
+                                            <a href=""><img src="<?php echo $gambar_path; ?>" class="card-img-top" alt="<?php echo htmlspecialchars($judul); ?>"> </a>
+                                            <div class="card-body">
+                                                <h5 class="card-title"><?php echo htmlspecialchars($judul); ?></h5>
+                                                <p class="card-text"><?php echo htmlspecialchars($deskripsi); ?></p>
+                                            </div>
                                         </div>
                                     </div>
+                                    <?php
+                                        }
+                                    } else {
+                                        echo '<p>Data buku tidak tersedia.</p>';
+                                    }
+                                    ?>
                                 </div>
                             </div>
-                        <?php
-                            }
-                        } else {
-                            echo '<p>Data buku tidak tersedia.</p>';
-                        }
-                        ?>
-
 
                             <?php } ?>
