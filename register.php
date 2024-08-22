@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Register ke perpustakaan</title>
+        <title>Register</title>
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
@@ -21,7 +21,7 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-5">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Register Perpustakaan Digital</h3></div>
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Register</h3></div>
                                     <div class="card-body">
                                         <?php
                                             if(isset($_POST['register'])) {
@@ -33,7 +33,7 @@
                                                 $no_telepon = $_POST['no_telepon'];
                                                 $level = $_POST['level'];
 
-                                                $insert = mysqli_query($koneksi, "INSERT INTO user(username,password,namalengkap,alamat,email,level) VALUES('$username','$password','$nama_lengkap','$alamat','$email','$level')");
+                                                $insert = mysqli_query($koneksi, "INSERT INTO user(username,password,namalengkap,alamat,email,no_telepon,level) VALUES('$username','$password','$nama_lengkap','$alamat','$email','$no_telepon','$level')");
 
                                                 if($insert) {
                                                 echo '<script>alert("Selamat, register berhasil. silahkan login"); location.href="login.php";</script>';
@@ -76,9 +76,9 @@
                                             </select>
                                             <label for="floatingSelectGrid">Role</label>
                                             </div>
-                                            <div class="form-grup d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <button class="btn btn-primary" type="submit" name="register" valeu="register">Register</button>
-                                                <a class="btn btn-danger" href="login.php">Login</a>
+                                            <div class="d-grid gap-2 mx-auto">
+                                                <button class="btn btn-primary" type="submit" name="register" value="register">Register</button>
+                                                <a class="btn btn-secondary" href="login.php">Login</a>
                                             </div>
                                             </div>
                                         </form>
