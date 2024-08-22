@@ -68,14 +68,15 @@ if ($_SESSION['user']['level'] != 'peminjam') { ?>
                             if ($_SESSION['user']['level'] != 'admin') { 
                                 ?>
 
-                        <div class="container-fluid px-4">
-                        <h1 class="mt-4">Perpustakaan Digital</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Perpustakaan Digital</li>
-                        </ol>
-                            <?php
-                        // Query untuk mendapatkan semua data buku
-                        $query = mysqli_query($koneksi, "SELECT * FROM buku");
+                            <div class="container-fluid px-4">
+                                <h1 class="mt-4">Perpustakaan Digital</h1>
+                                <ol class="breadcrumb mb-4">
+                                    <li class="breadcrumb-item active">Perpustakaan Digital</li>
+                                </ol>
+                                <div class="row">
+                                    <?php
+                                    // Query untuk mendapatkan semua data buku
+                                    $query = mysqli_query($koneksi, "SELECT * FROM buku");
 
                         // Pastikan query berhasil
                         if ($query) {
@@ -85,7 +86,7 @@ if ($_SESSION['user']['level'] != 'peminjam') { ?>
                                 $judul = $buku['Judul'];
                                 $deskripsi = $buku['deskripsi'];
                                // Cetak path gambar untuk debugging
-                                $gambar_path = '/assets/img/' . htmlspecialchars($gambar);
+                                $gambar_path = 'uploads/' . htmlspecialchars($gambar);
                                 echo '<!-- Path gambar: ' . $gambar_path . ' -->';
                                 ?>
                             <div class="row-cols-1 row-cols-md-3 g-4">
