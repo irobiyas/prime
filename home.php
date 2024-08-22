@@ -85,7 +85,7 @@ if ($_SESSION['user']['level'] != 'peminjam') { ?>
                                 $judul = $buku['Judul'];
                                 $deskripsi = $buku['deskripsi'];
                                // Cetak path gambar untuk debugging
-                                $gambar_path = 'uploads/' . htmlspecialchars($gambar);
+                                $gambar_path = '/assets/img/' . htmlspecialchars($gambar);
                                 echo '<!-- Path gambar: ' . $gambar_path . ' -->';
                                 ?>
                             <div class="row-cols-1 row-cols-md-3 g-4">

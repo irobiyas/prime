@@ -26,17 +26,19 @@ if (isset($_POST['submit'])) {
 
    // Pastikan folder assets/img ada
    if (!file_exists($upload_dir)) {
-       mkdir($upload_dir, 0777, true);
+       mkdir($upload_dir, 0775, true);
    }
 
    if (move_uploaded_file($gambar_tmp, $gambar_path)) {
-       echo '<p>Upload berhasil!</p>';
-   } else {
-       echo '<p>Upload gagal!</p>';
-   }
+      echo '<p>Upload berhasil!</p>';
+  } else {
+      $error = error_get_last();
+      echo '<p>Upload gagal! Error: ' . $error['message'] . '</p>';
+  }
+  
 
    // Masukkan data ke database
-   $query = mysqli_query($koneksi, "INSERT INTO buku(KategoriID, Judul, Penulis, Penerbit, TahunTerbit, Deskripsi, Gambar) VALUES('$KategoriID', '$judul', '$penulis', '$penerbit', '$tahun_terbit', '$deskripsi', '$gambar')");
+   $query = mysqli_query($koneksi, "INSERT INTO buku(KategoriID, Judul, Penulis, Penerbit, TahunTerbit, Deskripsi, gambar) VALUES('$KategoriID', '$judul', '$penulis', '$penerbit', '$tahun_terbit', '$deskripsi', '$gambar')");
 
    if ($query) {
        echo '<script>alert("Tambah data berhasil.");</script>';
