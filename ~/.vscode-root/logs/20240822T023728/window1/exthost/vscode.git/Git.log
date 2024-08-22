@@ -17973,3 +17973,6 @@
 2024-08-22 20:29:27.983 [info] > git cat-file -s c15f05c2c8b113b67bf945659190f137025de5c6 [0ms]
 2024-08-22 20:29:27.998 [info] > git show --textconv :index.php [4ms]
 2024-08-22 20:30:37.429 [info] > git check-ignore -v -z --stdin [7ms]
+2024-08-22 20:37:05.257 [info] > git ls-files --stage -- /opt/lampp/htdocs/prime/index.php [12ms]
+2024-08-22 20:37:05.320 [info] > git cat-file -s c15f05c2c8b113b67bf945659190f137025de5c6 [51ms]
+2024-08-22 20:37:05.366 [info] > git show --textconv :index.php [11ms]
