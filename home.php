@@ -88,9 +88,9 @@ if ($_SESSION['user']['level'] != 'peminjam') { ?>
                                             // Path gambar
                                             $gambar_path = 'assets/img/' . htmlspecialchars($gambar);
                                     ?>
-                                    <div class="col-md-4 mb-4">
+                                    <div class="col-md-3 mb-3">
                                         <div class="card">
-                                            <a href=""><img src="<?php echo $gambar_path; ?>" class="card-img-top" alt="<?php echo htmlspecialchars($judul); ?>"> </a>
+                                            <a href="?page=detail_buku"><img src="<?php echo $gambar_path; ?>" class="card-img-top" alt="<?php echo htmlspecialchars($judul); ?>"> </a>
                                             <div class="card-body">
                                                 <h5 class="card-title"><?php echo htmlspecialchars($judul); ?></h5>
                                                 <p class="card-text"><?php echo htmlspecialchars($deskripsi); ?></p>
