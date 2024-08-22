@@ -2512,3 +2512,5 @@
 2024-08-22 17:31:34.459 [warning] [Decorations] CAPPING events from decorations provider vscode.git 348
 2024-08-22 17:31:39.502 [warning] [Decorations] CAPPING events from decorations provider vscode.git 348
 2024-08-22 17:31:40.091 [warning] [Decorations] CAPPING events from decorations provider vscode.git 348
+2024-08-22 18:05:31.868 [info] ExtensionService#_doActivateExtension vscode.media-preview, startup: false, activationEvent: 'onCustomEditor:imagePreview.previewEditor'
+2024-08-22 19:37:02.952 [info] ExtensionService#_doActivateExtension vscode.css-language-features, startup: false, activationEvent: 'onLanguage:css'
