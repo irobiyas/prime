@@ -1,6 +1,6 @@
 <?php
+
 include "koneksi.php";
-session_start(); // Pastikan session dimulai
 if (!isset($_SESSION['user'])) {
     header('location:login.php'); 
     exit;
@@ -16,7 +16,7 @@ if (!isset($_SESSION['user'])) {
     <meta name="author" content="" />
     <title>Perpustakaan Digital</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="assets/css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 <body class="sb-nav-fixed">
@@ -86,7 +86,9 @@ if (!isset($_SESSION['user'])) {
                 <div class="container-fluid">
                    <?php
                         $page = isset($_GET['page']) ? $_GET['page'] : 'home';
-                        if (file_exists($page . '/' . $page . '.php')) {
+                        if ($page === 'home') {
+                            include 'home.php';
+                        } else if (file_exists($page . '/' . $page . '.php')) {
                             include $page . '/' . $page . '.php';
                         } else {
                             include '404.php';
