@@ -13,9 +13,9 @@
                         <th>Buku</th>
                         <th>Ulasan</th>
                         <th>Rating</th>
-                        <?php if ($_SESSION['user']['level'] != 'peminjam') { ?>
+                        <?php if ($_SESSION['user']['level'] != 'admin') { ?>
                         <th>Aksi</th>
-                        <?php } ?>
+                    <?php } ?>
                     </tr>
                     <?php
                     $i = 1;
@@ -28,7 +28,7 @@
                         <td><?php echo $data['Judul']; ?></td>
                         <td><?php echo $data['Ulasan']; ?></td>
                         <td><?php echo $data['Rating']; ?></td>
-                        <?php if ($_SESSION['user']['level'] != 'peminjam') { ?>
+                        <?php if ($_SESSION['user']['level'] != 'admin') { ?>
                         <td>
                             <a href="?page=ulasan_ubah&id=<?php echo $data['UlasanID']; ?>" class="btn btn-info">Ubah</a>
                             <a onclick="return confirm('Apakah Anda yakin menghapus Ulasan ini?')" href="?page=ulasan_hapus&id=<?php echo $data['UlasanID']; ?>" class="btn btn-danger">Hapus</a>
