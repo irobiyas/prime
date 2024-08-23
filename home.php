@@ -1,5 +1,4 @@
 <?php
-include "index.php";
 // untuk dashboard admin
 if ($_SESSION['user']['level'] != 'peminjam') { ?>
     <div class="container-fluid px-4">

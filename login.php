@@ -1,5 +1,4 @@
 <?php
-session_start();
     include "koneksi.php";
 ?>
 <!DOCTYPE html>
@@ -11,7 +10,7 @@ session_start();
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Login ke perpustakaan</title>
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href="assets/css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
     <body class="bg-primary">

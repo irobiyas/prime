@@ -1,5 +1,4 @@
 <?php
-
 include "koneksi.php";
 if (!isset($_SESSION['user'])) {
     header('location:login.php'); 
@@ -85,14 +84,12 @@ if (!isset($_SESSION['user'])) {
             <main>
                 <div class="container-fluid">
                    <?php
-                        $page = isset($_GET['page']) ? $_GET['page'] : 'home';
-                        if ($page === 'home') {
-                            include 'home.php';
-                        } else if (file_exists($page . '/' . $page . '.php')) {
-                            include $page . '/' . $page . '.php';
-                        } else {
-                            include '404.php';
-                        }
+                       $page = isset($_GET['page']) ? $_GET['page'] : 'home';
+                       if(file_exists($page . '.php')) {
+                         include $page . '.php';
+                       }else{
+                        include '404.php';
+                       }
                     ?>
 
                 </div>
